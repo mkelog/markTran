@@ -1,0 +1,331 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Portfolio</title>
+</head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+body{
+	background-color:white;
+	margin:0px;
+	    font-size: 12px;
+    font-family: 'Helvetica Neue', Arial, Helvetica, Verdana, sans-serif;
+	    max-width: 80%;
+
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+#nav {
+    position: relative;
+    width: auto;
+    vertical-align: top;
+    display: inline-block;
+	margin:5px;
+
+}
+
+video {
+     width: 85vw;
+
+
+}
+@media (max-width: 800px) {
+  video {
+     width: 100vw;
+  }
+}
+#video{
+	
+
+margin-left: 5px;
+    position: absolute;
+    display:inline-block;
+
+       width: auto;
+
+}
+
+img {
+    vertical-align: middle;
+
+	    width: 100%;
+    height: 100%;
+}
+.prev,
+.next {
+
+  cursor: pointer;
+  position: absolute;
+  top: 10vh;
+  width: auto;
+  padding: 16px;
+  color: white;
+
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  background-color:grey;
+}
+.container {
+
+overflow:auto;
+width:85vw;
+  position: relative;
+  height:100vh;
+
+}
+.container::-webkit-scrollbar {
+  display: none;
+}
+.mySlides {
+text-align:center;
+  display: none;
+}
+@media (max-width: 800px) {
+  #video {
+      left: 0px;
+     display:block;
+	 margin-left:0px;
+  }
+  
+    #images {
+	top:100px;
+      left: 0px;
+     display:block;
+  }
+  img {
+	height:auto;
+	width:100vw;
+  
+  }
+.prev,
+.next {
+display:none;
+}
+.container {
+
+
+width:100vw;
+  position: relative;
+}
+  
+}
+#images{
+
+
+    position: absolute;
+    display:none;
+
+       width: auto;
+}
+b{
+	    font-size: 12px;
+		font-family: 'Helvetica Neue', Arial, Helvetica, Verdana, sans-serif;
+}
+p{
+	    font-size: 12px;
+		font-family: 'Helvetica Neue', Arial, Helvetica, Verdana, sans-serif;
+}
+b:hover{
+	color:red;
+	cursor: crosshair;
+}
+p:hover{
+	color:red;
+	cursor: crosshair;
+}
+#information{
+	visibility: hidden;
+	transition: visibility 1s;
+}
+
+
+
+
+
+
+.next {
+
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+
+
+
+
+
+</style>
+
+<body>
+<div id = "nav">
+	<b onclick="video()"><u>MARK TRAN</u></b>
+	<p onclick="photography()">Photography</p>
+	<p  onclick="information()"><u>Information + Contact</u></p>
+	<p id = "information"> email address </p>
+</div>
+
+<div id = "video">
+	<video id ="video1" muted autoplay loop playsinline controls>
+	<source src="media/Showreel21.mp4">
+	</video>
+</div>
+
+<div id = "images">
+<div class="container">
+  <div class="mySlides">
+    <img src="media/images/Lightbox.jpg" >
+  </div>
+
+  <div class="mySlides">
+    <img src="media/images/flyskyyy.jpg" >
+  </div>
+
+  <div class="mySlides">
+    <img src="media/images/Bus station.jpg" >
+  </div>
+    
+  <div class="mySlides">
+    <img src="media/images/hills3.jpg" >
+  </div>
+
+  <div class="mySlides">
+    <img src="media/images/Canada water.jpg">
+  </div>
+    
+
+    
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+
+</div>
+	
+	
+	<!-- Container for the image gallery -->
+
+</div>
+
+</body>
+
+<script>
+window.onresize=windowSize;
+function photography(){
+	document.getElementById("video1").pause();
+
+	document.getElementById('images').style = 'display:inline-block';
+
+	document.getElementById("video1").currentTime = 0;
+
+	document.getElementById('video').style = 'display:none;';
+	
+	document.getElementById("video1").muted = true;
+}
+function video(){
+
+	document.getElementById('video').style = 'inline-block';
+
+	document.getElementById("video1").currentTime = 0;
+
+	document.getElementById('images').style = 'display:none;';
+	
+	document.getElementById("video1").muted = false;
+	
+	document.getElementById("video1").play();
+
+
+}
+var close = 0;
+
+function  information(){
+if(close==1)
+{
+	document.getElementById('information').style = 'visibility: hidden;opacity: 0;';
+	close=0;
+}else{
+	document.getElementById('information').style = 'visibility: visible;opacity: 1;';
+	close=1;
+	}
+}
+
+
+var slideIndex = 1;
+	if (document.documentElement.clientWidth>800){
+	showSlides(slideIndex);
+	}
+	if(document.documentElement.clientWidth<800){
+	showSlides2(slideIndex);
+
+	}
+function windowSize(){
+	if (document.documentElement.clientWidth>800){
+	showSlides(slideIndex);
+	}
+	if(document.documentElement.clientWidth<800){
+	showSlides2(slideIndex);
+
+	}
+
+}
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+
+
+
+    if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slides[slideIndex-1].style.display = "block";
+
+}
+
+function showSlides2(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+
+
+    if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "block";
+  }
+
+  slides[slideIndex-1].style.display = "block";
+
+}
+
+
+
+</script>
+<html>
+
+						
