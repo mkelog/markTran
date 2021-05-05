@@ -223,8 +223,12 @@ p:hover{
 
 <script>
 window.onresize=windowSize;
+var playPromise = document.getElementById("video").play();
+
+
+		
 function photography(){
-	document.getElementById("video1").pause();
+	
 
 	document.getElementById('images').style = 'display:inline-block';
 
@@ -244,7 +248,14 @@ function video(){
 	
 	document.getElementById("video1").muted = false;
 	
-	document.getElementById("video1").play();
+	if (playPromise !== undefined) {
+	playPromise.then(_ => {
+		
+		})
+		.catch(error => {
+		
+		});
+		}
 
 
 }
