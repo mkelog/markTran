@@ -26,24 +26,16 @@ body::-webkit-scrollbar {
 
 }
 
-video {
-     width: 85vw;
 
 
-}
-@media (max-width: 800px) {
-  video {
-     width: 100vw;
-  }
-}
 #video{
 	
 
-margin-left: 5px;
+	margin-left: 5px;
     position: absolute;
     display:inline-block;
-
-       width: auto;
+	padding:48.25% 0 0 0;
+	width:85vw
 
 }
 
@@ -53,22 +45,7 @@ img {
 	    width: 100%;
     height: 100%;
 }
-.prev,
-.next {
 
-  cursor: pointer;
-  position: absolute;
-  top: 10vh;
-  width: auto;
-  padding: 16px;
-  color: white;
-
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-  background-color:grey;
-}
 .container {
 
 overflow:auto;
@@ -87,8 +64,11 @@ text-align:center;
 @media (max-width: 800px) {
   #video {
       left: 0px;
+	  width: 100vw;
      display:block;
 	 margin-left:0px;
+	 position:relative;
+	padding:70.25% 0 0 0;	 
   }
   
     #images {
@@ -154,11 +134,24 @@ p:hover{
 }
 
 
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
 
+.prev,
+.next {
+
+  cursor: pointer;
+  position: absolute;
+  height:100%;
+  top: 10vh;
+  width: auto;
+  padding: 16px;
+  color: white;
+
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+
+}
 
 
 
@@ -177,38 +170,141 @@ p:hover{
 	<p id = "information"> email address </p>
 </div>
 
-<div id = "video">
-	<video id ="video1" muted autoplay loop playsinline controls>
-	<source src="media/Showreel21-1.m4v">
-	</video>
+
+<div id = "video" >
+<iframe src="https://player.vimeo.com/video/520886170?autoplay=1&loop=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 </div>
+<script src="https://player.vimeo.com/api/player.js"></script>
+
 
 <div id = "images">
 <div class="container">
   <div class="mySlides">
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <img src="media/images/Lightbox.jpg" >
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>	
+  </div>
+ 
+  <div class="mySlides">
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <img src="media/images/34550028.jpg" >
+	  <a class="next" onclick="plusSlides(1)">&#10095;</a>		
   </div>
 
   <div class="mySlides">
-    <img src="media/images/flyskyyy.jpg" >
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>  
+    <img src="media/images/airpor.jpg" >
+	  <a class="next" onclick="plusSlides(1)">&#10095;</a>		
   </div>
-
+    
   <div class="mySlides">
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>  
+    <img src="media/images/bodyworld.jpg" >
+	  <a class="next" onclick="plusSlides(1)">&#10095;</a>	
+  </div>
+ <div class="mySlides">
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a> 
     <img src="media/images/Bus station.jpg" >
-  </div>
-    
-  <div class="mySlides">
-    <img src="media/images/hills3.jpg" >
-  </div>
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>	
+  </div>  
 
   <div class="mySlides">
-    <img src="media/images/Canada water.jpg">
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>  
+    <img src="media/images/butcher.jpg">
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>	
   </div>
+  <div class="mySlides">
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>  
+    <img src="media/images/caravan.jpg">
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>	
+  </div>
+  <div class="mySlides">
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>  
+    <img src="media/images/CNV00007_1.jpg">
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>	
+  </div>
+  <div class="mySlides">
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>  
+    <img src="media/images/doorway_.jpg">
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>	
+  </div>
+  <div class="mySlides">
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>  
+    <img src="media/images/gambe.jpg">
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>	
+  </div>
+  <div class="mySlides">
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>  
+    <img src="media/images/help.jpg">
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>	
+  </div>
+  <div class="mySlides">
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>  
+    <img src="media/images/hills3.jpg">
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>	
+  </div>
+  <div class="mySlides">
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>  
+    <img src="media/images/hottub.jpg">
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>	
+  </div>
+  <div class="mySlides">
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>  
+    <img src="media/images/island.jpg">
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>	
+  </div>
+  <div class="mySlides">
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>  
+    <img src="media/images/lady.jpg">
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>	
+  </div>
+  <div class="mySlides">
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>  
+    <img src="media/images/laund.jpg">
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>	
+  </div>
+  <div class="mySlides">
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>  
+    <img src="media/images/loops.jpg">
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>	
+  </div>
+  <div class="mySlides">
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>  
+    <img src="media/images/redboxplant.jpg">
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>	
+  </div>
+  <div class="mySlides">
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>  
+    <img src="media/images/shopper.jpg">
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>	
+  </div>
+  <div class="mySlides">
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>  
+    <img src="media/images/spoiler2.jpg">
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>	
+  </div>
+  <div class="mySlides">
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>  
+    <img src="media/images/swamper.jpg">
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>	
+  </div>
+  <div class="mySlides">
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>  
+    <img src="media/images/tank.jpg">
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>	
+  </div>
+  <div class="mySlides">
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>  
+    <img src="media/images/wave2.jpg">
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>	
+  </div>
+
+  
     
 
     
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
 
 
 
@@ -232,21 +328,21 @@ function photography(){
 
 	document.getElementById('images').style = 'display:inline-block';
 
-	document.getElementById("video1").currentTime = 0;
+
 
 	document.getElementById('video').style = 'display:none;';
 	
-	document.getElementById("video1").muted = true;
+
 }
 function video(){
 
 	document.getElementById('video').style = 'inline-block';
 
-	document.getElementById("video1").currentTime = 0;
+
 
 	document.getElementById('images').style = 'display:none;';
 	
-	document.getElementById("video1").muted = false;
+
 	
 
 
