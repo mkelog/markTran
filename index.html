@@ -26,7 +26,11 @@ body::-webkit-scrollbar {
 	margin:5px;
 
 }
+#information{
+	left:12%; width: 57vw; height: 100vh; display:none; position:absolute;
+	
 
+}
 
 
 #video{
@@ -82,6 +86,17 @@ text-align:center;
 	width:100vw;
   
   }
+  #information{
+	      left: 0px;
+	  width: 100vw;
+     display:block;
+	 margin-left:0px;
+	 position:relative;
+
+  
+  }
+
+
 .prev,
 .next {
 display:none;
@@ -118,10 +133,7 @@ p:hover{
 	color:red;
 	cursor: crosshair;
 }
-#information{
-	visibility: hidden;
-	transition: visibility 1s;
-}
+
 
 
 
@@ -160,18 +172,21 @@ p:hover{
 
 
 
-
 </style>
 
 <body>
+
 <div id = "nav">
 	<b onclick="video()">MARK TRAN</b>
 	<p onclick="photography()">Photography</p>
 	<p  onclick="information()"><u>Information + Contact</u></p>
-	<p id = "information"> email address </p>
+
 </div>
 
+	<iframe id ="information" src="https://docs.google.com/document/d/e/2PACX-1vSHUucjKme9xRtvA6BksQoRHY-NFJgKXX7sOncWGnGm4mEUvlzlpZ1ySQNe7v-CQhsCi0NIRbkJibHA/pub?embedded=true"></iframe>
 
+
+	
 <div id = "video" >
 <iframe id ="iframe1"  src="https://player.vimeo.com/video/520886170?" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow=" fullscreen; picture-in-picture" allowfullscreen></iframe>
 </div>
@@ -311,7 +326,12 @@ p:hover{
   </div>  
     
 
-    
+<div id = "cv">
+
+
+
+
+</div>  
 
 
 
@@ -342,8 +362,8 @@ var stopVideo = function ( element ) {
 };
 function photography(){
 	stopVideo(document.getElementById('video'));
-	document.getElementById('images').style = 'display:inline-block';
-
+	document.getElementById('images').style = 'display:inline-block;';
+document.getElementById('information').style ="display:none;"
 
 
 	document.getElementById('video').style = 'display:none;';
@@ -357,8 +377,8 @@ function photography(){
 
 function video(){
 
-	document.getElementById('video').style = 'inline-block';
-
+	document.getElementById('video').style = 'display:inline-block;';
+document.getElementById('information').style ="display:none;"
 
 
 	document.getElementById('images').style = 'display:none;';
@@ -369,17 +389,14 @@ function video(){
 
 
 }
+
+
 var close = 0;
 
 function  information(){
-if(close==1)
-{
-	document.getElementById('information').style = 'visibility: hidden;opacity: 0;';
-	close=0;
-}else{
-	document.getElementById('information').style = 'visibility: visible;opacity: 1;';
-	close=1;
-	}
+	document.getElementById('information').style ="display:inline-block;"
+	document.getElementById('images').style = 'display:none;';
+	document.getElementById('video').style = 'display:none;';
 }
 
 
